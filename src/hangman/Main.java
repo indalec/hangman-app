@@ -10,13 +10,13 @@ public class Main {
         String secretWord = getSecretWord();
         //   System.out.println(secretWord);
         char[] dashedWord = getDashedWord(secretWord);
+        int playAgain;
 
-
-        boolean endGame = false;
+        boolean endGame = reseter(playAgain);
 
         Scanner scanner = new Scanner(System.in);
 
-        int tries = 15;
+        int tries = 6;
 
 
         do {
@@ -51,7 +51,14 @@ public class Main {
             }
         } while (!endGame);
 
-        System.out.println(dashedWord);
+
+
+        System.out.println("do you want to play again? Enter '1' for 'yes'");
+
+        playAgain = scanner.nextInt();
+
+
+
 
         scanner.close();
 
@@ -103,6 +110,20 @@ public class Main {
         }
         return false;
 
+    }
+
+    static boolean reseter(int playAgain) {
+
+        if (playAgain == 1) {
+            String secretWord = getSecretWord();
+            char[] dashedWord = getDashedWord(secretWord);
+            int tries = 6;
+
+            // Additional reset logic if needed
+            System.out.println("Game reset! New secret word: " + secretWord);
+       return false;
+        }
+return true;
     }
 
 }
