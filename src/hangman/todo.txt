@@ -10,3 +10,7 @@
 (D) -Add more category for the secret word and the posibility to chose one at the start of the game
 
 (C) -Put a blank space between each dash
+
+(D) -List the used letters
+
+(D) -Show the secret word after loosing the game
