@@ -1,0 +1,16 @@
+[the letter marks the priority of the to-do]
+
+
+(A) -Refactor the code to make it more readable and scalable
+
+(B) -Add the reset function
+
+(B) -Add ascii images for the terminal that will show after each input. (with a switch??)
+
+(D) -Add more category for the secret word and the posibility to chose one at the start of the game
+
+(C) -Put a blank space between each dash
+
+(D) -List the used letters
+
+(D) -Show the secret word after loosing the game
