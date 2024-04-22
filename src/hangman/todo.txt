@@ -14,3 +14,6 @@
 (D) -List the used letters
 
 (D) -Show the secret word after loosing the game
+
+(C) -add the feature that the user sets a word or group of words to be guessed
+	--When creating dashedWord check then also if the char is a space so i doesn't transform it to into a dash
