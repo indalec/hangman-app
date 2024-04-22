@@ -20,10 +20,8 @@ public class Main {
 
 
         do {
+            displayGameState(dashedWord, tries);
 
-            System.out.println("You still have " + tries + " tries left.");
-            System.out.println(dashedWord);
-            System.out.println("Enter a letter (a-z):");
             char letter = scanner.next().charAt(0);
             boolean correctLetter = false;
 
@@ -103,6 +101,11 @@ public class Main {
         }
         return false;
 
+    }
+    private static void displayGameState(char[] dashedWord, int tries) {
+        System.out.println("You still have " + tries + " tries left.");
+        System.out.println(dashedWord);
+        System.out.println("Enter a letter (a-z):");
     }
 
 }
