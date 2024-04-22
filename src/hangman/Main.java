@@ -16,7 +16,7 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
 
-        int tries = 15;
+        int tries = 6;
 
 
         do {
