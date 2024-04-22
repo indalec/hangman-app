@@ -8,3 +8,5 @@
 (B) -Add ascii images for the terminal that will show after each input. (with a switch??)
 
 (D) -Add more category for the secret word and the posibility to chose one at the start of the game
+
+(C) -Put a blank space between each dash
