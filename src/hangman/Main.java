@@ -22,7 +22,7 @@ public class Main {
         do {
             displayGameState(dashedWord, tries);
 
-            char letter = scanner.next().charAt(0);
+            char letter = getUserLetter(scanner);
             boolean correctLetter = false;
 
             for (int i = 0; i < secretWord.length(); i++) {
@@ -106,6 +106,10 @@ public class Main {
         System.out.println("You still have " + tries + " tries left.");
         System.out.println(dashedWord);
         System.out.println("Enter a letter (a-z):");
+    }
+
+    private static char getUserLetter (Scanner scanner){
+        return scanner.next().charAt(0);
     }
 
 }
