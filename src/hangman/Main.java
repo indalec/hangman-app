@@ -12,7 +12,7 @@ public class Main {
         char[] dashedWord = getDashedWord(secretWord);
         int playAgain;
 
-        boolean endGame = reseter(playAgain);
+        boolean endGame = false;
 
         Scanner scanner = new Scanner(System.in);
 
