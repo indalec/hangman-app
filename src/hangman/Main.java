@@ -6,15 +6,45 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
+        Scanner scanner = new Scanner(System.in);
+        boolean repeatGame = true;
+
+        while (repeatGame) {
+            gameBody();
+
+//            if (input.equals("Y") == input.equals("y")) {
+//                repeatGame = true;
+//
+//            } else if ((input.equals("N") == input.equals("n"))) {
+//                repeatGame = false;
+//
+//            } else
+         boolean questionAnswered = false;
+            while (!questionAnswered) {
+                System.out.println("Do you want to play again? (Y/N)");
+                String input = scanner.next();
+                if (input.equalsIgnoreCase("Y")) {
+                    repeatGame = true;
+                    questionAnswered = true;
+                } else if (input.equalsIgnoreCase("N")) {
+                    repeatGame = false;
+                    questionAnswered = true;
+                } else {
+                    System.out.println("Choose a valid answer!");
+                    questionAnswered = false;
+                }
+            }
 
 
-    gameBody();
 
 
 
+
+        }
+        scanner.close();
     }
 
-    public static void gameBody(){
+    public static void gameBody() {
         String secretWord = getSecretWord();
         //   System.out.println(secretWord);
         char[] dashedWord = getDashedWord(secretWord);
@@ -59,7 +89,6 @@ public class Main {
 
         System.out.println(dashedWord);
 
-        scanner.close();
     }
 
     static String getSecretWord() {
@@ -109,13 +138,14 @@ public class Main {
         return false;
 
     }
+
     private static void displayGameState(char[] dashedWord, int tries) {
         System.out.println("You still have " + tries + " tries left.");
         System.out.println(dashedWord);
         System.out.println("Enter a letter (a-z):");
     }
 
-    private static char getUserLetter (Scanner scanner){
+    private static char getUserLetter(Scanner scanner) {
         return scanner.next().charAt(0);
     }
 
