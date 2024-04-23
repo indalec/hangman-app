@@ -7,6 +7,13 @@ public class Main {
     public static void main(String[] args) {
 
 
+
+    gameBody();
+
+
+    }
+
+    public static void gameBody(){
         String secretWord = getSecretWord();
         //   System.out.println(secretWord);
         char[] dashedWord = getDashedWord(secretWord);
@@ -35,7 +42,7 @@ public class Main {
             }
             if (!correctLetter) {
                 System.out.println("Wrong letter!");
-                --tries;
+                tries--;
                 if (tries == 0) {
                     System.out.println("You loose, because you're hanged! XwX");
                     endGame = true;
@@ -52,7 +59,6 @@ public class Main {
         System.out.println(dashedWord);
 
         scanner.close();
-
     }
 
     static String getSecretWord() {
@@ -87,7 +93,7 @@ public class Main {
 //        }
 
         for (int i = 0; i < lenghtWord; i++) {
-            dashedWord[i] = '_';
+            dashedWord[i] = '-';
 
 
         }
@@ -97,7 +103,7 @@ public class Main {
 
     static boolean areDashes(char[] word) {
         for (char letter : word) {
-            if (letter == '_') return true;
+            if (letter == '-') return true;
         }
         return false;
 
